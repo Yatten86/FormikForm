@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Formik Form Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+The FormikForm is a customizable, multilingual form component build with React and Formik. 
+This form has been constructed with input validation in mind and features language switch between English and Romanian.
 
-In the project directory, you can run:
+It's still a work in progress (needs updates and cleaning) - was committed in this version, so that i can learn how to 
+use GitHub.
 
-### `npm start`
+Main purpose of the project was to get familiar with Formik, the visual part will be updated in the upcoming period.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of content
+* [Technologies Used](#technologies-used)
+* [Instalation](#instalation)
+* [Usage](#usage)
+* [Features](#features)
+* [Form inputs](#form-inputs)
+* [Form validation](#form-validation)
+* [Language Switching](#language-switching)
+* [Localization](#localization)
+* [How to contribute](#how-to-contribute)
+* [Licence](#license)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
+* React
+* Formik
+* Yup (for schema validation)
 
-### `npm run build`
+## Installation 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You will need to install the following dependencies to use this components
+* React (`npm install react`)
+* Formik (`npm install formik`)
+* Yup (`npm install yup`)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
+To use the given Formik component, import it in your desire component:
+```
+import YoutubeForm from './YoutubeForm';
+```
+# Features
+## Form inputs
+The form includes the following inputs:
+* Name (text input)
+* Email (email input)
+* Channel (text input)
+* Address (text input)
+* Comments (textarea)
+* Facebook (text input)
+* Twitter (text input)
+* Primary Phone Number (text input)
+* Secondary Phone Number (text input)
+* List of additional phone numbers (text input array)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Form validation
+Form validation is done with Formik and Yup. Required fields are name, email and channel. If the user tries to submit
+the form without filling these in, a relevant error message will be displayed in the user's current language.
 
-### `npm run eject`
+## Language Switching
+This form supports language switching between English and Romanian. To change the form's language, click the button at 
+the top of the form.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Localization
+The language settings for the form are imported from JSON files:
+```
+let engLang = require("../lang/english.json");
+let roLang = require("../lang/romanian.json");
+```
+## How to contribute
+Feel free to contribute to this project by opening a Pull Request. If you have any questions of find any bugs, please 
+open an issue.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Keep in mind that this is still an ongoing project, that will be constantly updated.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
