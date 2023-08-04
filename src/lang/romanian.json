@@ -1,0 +1,34 @@
+{
+  "form": {
+    "label": {
+      "email": "Adresa E-mail",
+      "name": "Nume si Prenume",
+      "channel": "Canal",
+      "address": "Adresa",
+      "comments": "Comentarii",
+      "fb": "Cont Facebook",
+      "tw": "Cont Twitter (X)",
+      "prim_ph": "Nr. telefon primar",
+      "sec_ph": "Nr. telefon secundar",
+      "list_ph": "Lista numere telefon, optional",
+      "errors": {
+        "required": "Acest camp este obligatoriu!",
+        "invalid_format" : "Format invalid adresa e-mail!"
+      },
+      "placeholder": {
+        "name": "Introduceti numele dumneavoastra",
+        "email": "Adresa dumneavoastra de e-mail",
+        "channel": "Canalul de Youtube",
+        "address": "Adresa dumneavoastra de corespondenta",
+        "comments": "Lasati-ne un comentariu",
+        "fb": "Contul dumneavoastra de Facebook",
+        "tw": "Contul dumneavoastra de Twitter (X)",
+        "prim_ph": "Introduceti numarul de telefon",
+        "sec_ph": "Introduceti numarul de telefon"
+      },
+      "buttons": {
+        "lang": "Limba engleza"
+      }
+    }
+  }
+}

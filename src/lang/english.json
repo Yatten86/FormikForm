@@ -1,0 +1,34 @@
+{
+  "form": {
+    "label": {
+      "name": "Name and surname",
+      "email": "E-mail",
+      "channel": "Channel",
+      "address": "Address",
+      "comments": "Comments",
+      "fb": "Facebook account",
+      "tw": "Twitter (X) account",
+      "prim_ph": "Primary phone",
+      "sec_ph": "Secondary phone",
+      "list_ph": "List of phones, optional",
+      "errors": {
+        "required": "This field is required!",
+        "invalid_format" : "Invalid e-mail format!"
+      },
+      "placeholder": {
+        "name": "Your name here",
+        "email": "Your e-mail address",
+        "channel": "Youtube Channel",
+        "address": "Your address",
+        "comments": "Give us a feedback",
+        "fb": "Your Facebook account",
+        "tw": "Your Twitter (X) account",
+        "prim_ph": "Primary phone number",
+        "sec_ph": "Secondary phone number"
+      },
+      "buttons": {
+        "lang": "Romanian language"
+      }
+    }
+  }
+}
