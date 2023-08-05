@@ -24,15 +24,7 @@ const onSubmit = (values) => {
   console.log("Form data", values);
 };
 
-const validateComments = (value) => {
-  let error;
-  if (!value) {
-    error = "Field is required";
-  }
-  return error;
-};
-
-function YoutubeForm() {
+function FormikForm() {
   let [lang, setLang] = useState(engLang);
 
   let changeLanguage = () => {
@@ -131,7 +123,6 @@ function YoutubeForm() {
                 as="textarea"
                 id="comments"
                 name="comments"
-                validate={validateComments}
                 placeholder={lang.form.label.placeholder.comments}
               />
               <ErrorMessage name="comments" component={TextError} />
@@ -229,4 +220,4 @@ function YoutubeForm() {
   );
 }
 
-export default YoutubeForm;
+export default FormikForm;
