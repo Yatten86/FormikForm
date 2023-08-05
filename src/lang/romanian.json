@@ -27,7 +27,9 @@
         "sec_ph": "Introduceti numarul de telefon"
       },
       "buttons": {
-        "lang": "Limba engleza"
+        "lang": "Limba engleza",
+        "add": "Adauga numar de telefon",
+        "submit": "Trimite"
       }
     }
   }

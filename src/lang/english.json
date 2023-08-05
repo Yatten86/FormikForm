@@ -27,7 +27,9 @@
         "sec_ph": "Secondary phone number"
       },
       "buttons": {
-        "lang": "Romanian language"
+        "lang": "Romanian language",
+        "add": "Add phone number",
+        "submit": "Submit"
       }
     }
   }

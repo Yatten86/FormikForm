@@ -20,8 +20,9 @@ const initialValues = {
   phNumbers: [""],
 };
 
-const onSubmit = (values) => {
+let onSubmit = (values, onSubmitProps) => {
   console.log("Form data", values);
+  onSubmitProps.resetForm();
 };
 
 function FormikForm() {
@@ -31,7 +32,7 @@ function FormikForm() {
     setLang(lang === engLang ? roLang : engLang);
   };
 
-  const validationSchema = Yup.object({
+  let validationSchema = Yup.object({
     name: Yup.string().required(lang.form.label.errors.required),
     email: Yup.string()
       .email(lang.form.label.errors.invalid_format)
@@ -44,10 +45,8 @@ function FormikForm() {
       initialValues={initialValues}
       onSubmit={onSubmit}
       validationSchema={validationSchema}
-      // validateOnMount
     >
       {(formik) => {
-        console.log("Formik props", formik);
         return (
           <Form>
             <button type="button" onClick={changeLanguage}>
@@ -96,8 +95,7 @@ function FormikForm() {
               <label htmlFor="address">{lang.form.label.address}</label>
               <Field type="text" id="address" name="address">
                 {(props) => {
-                  let { field, form, meta } = props;
-                  // console.log("Render props", props);
+                  let { field, meta } = props;
                   return (
                     <div>
                       <input
@@ -172,11 +170,9 @@ function FormikForm() {
               <label>{lang.form.label.list_ph}</label>
               <FieldArray name="phNumbers">
                 {(fieldArrayProps) => {
-                  // console.log("fieldArrayProps", fieldArrayProps);
                   let { push, remove, form } = fieldArrayProps;
                   let { values } = form;
                   let { phNumbers } = values;
-                  // console.log("Form errors", form.errors);
                   return (
                     <div>
                       {phNumbers.map((phNumber, index) => (
@@ -189,7 +185,7 @@ function FormikForm() {
                           )}
 
                           <button type="button" onClick={() => push("")}>
-                            +
+                            {lang.form.label.buttons.add}
                           </button>
                         </div>
                       ))}
@@ -199,19 +195,8 @@ function FormikForm() {
               </FieldArray>
             </div>
 
-            {/*<button*/}
-            {/*  type="button"*/}
-            {/*  onClick={() => formik.validateField("comments")}*/}
-            {/*>*/}
-            {/*  Validate comments*/}
-            {/*</button>*/}
-            {/*<button type="button" onClick={() => formik.validateForm()}>*/}
-            {/*  Validate all*/}
-            {/*</button>*/}
-            {/*  Submit button*/}
-            {/* Submit button is disabled until user interact with the form*/}
-            <button type="submit" disabled={!(formik.dirty && formik.isValid)}>
-              Submit
+            <button type="submit" disabled={!formik.dirty && formik.isValid}>
+              {lang.form.label.buttons.submit}
             </button>
           </Form>
         );
