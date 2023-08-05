@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Formik,
-  Form,
-  Field,
-  ErrorMessage,
-  FieldArray,
-  FastField,
-} from "formik";
+import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
 import TextError from "./TextError";
 
@@ -71,7 +64,7 @@ function YoutubeForm() {
 
             <div className="form-control">
               <label htmlFor="name">{lang.form.label.name}</label>
-              <FastField
+              <Field
                 type="text"
                 id="name"
                 name="name"
@@ -83,7 +76,7 @@ function YoutubeForm() {
 
             <div className="form-control">
               <label htmlFor="email">{lang.form.label.email}</label>
-              <FastField
+              <Field
                 type="email"
                 id="email"
                 name="email"
@@ -97,7 +90,7 @@ function YoutubeForm() {
 
             <div className="form-control">
               <label htmlFor="channel">{lang.form.label.channel}</label>
-              <FastField
+              <Field
                 type="text"
                 id="channel"
                 name="channel"
@@ -109,7 +102,7 @@ function YoutubeForm() {
 
             <div className="form-control">
               <label htmlFor="address">{lang.form.label.address}</label>
-              <FastField type="text" id="address" name="address">
+              <Field type="text" id="address" name="address">
                 {(props) => {
                   let { field, form, meta } = props;
                   // console.log("Render props", props);
@@ -127,7 +120,7 @@ function YoutubeForm() {
                     </div>
                   );
                 }}
-              </FastField>
+              </Field>
               {/*if visited and empty error will be printed*/}
               <ErrorMessage name="address" />
             </div>
@@ -156,7 +149,7 @@ function YoutubeForm() {
 
             <div className="form-control">
               <label htmlFor="twitter">{lang.form.label.tw}</label>
-              <FastField
+              <Field
                 type="text"
                 id="twitter"
                 name="social.twitter"
@@ -166,7 +159,7 @@ function YoutubeForm() {
 
             <div className="form-control">
               <label htmlFor="primaryPh">{lang.form.label.prim_ph}</label>
-              <FastField
+              <Field
                 type="text"
                 id="primaryPh"
                 name="phoneNumbers[0]"
@@ -176,7 +169,7 @@ function YoutubeForm() {
 
             <div className="form-control">
               <label htmlFor="secondaryPh">{lang.form.label.sec_ph}</label>
-              <FastField
+              <Field
                 type="text"
                 id="secondaryPh"
                 name="phoneNumbers[1]"
