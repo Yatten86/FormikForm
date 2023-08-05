@@ -13,7 +13,7 @@ Main purpose of the project was to get familiar with Formik, the visual part wil
 
 ## Table of content
 * [Technologies Used](#technologies-used)
-* [Instalation](#instalation)
+* [Installation](#installation)
 * [Usage](#usage)
 * [Features](#features)
 * [Form inputs](#form-inputs)
@@ -21,15 +21,13 @@ Main purpose of the project was to get familiar with Formik, the visual part wil
 * [Language Switching](#language-switching)
 * [Localization](#localization)
 * [How to contribute](#how-to-contribute)
-* [Licence](#license)
-
 
 ## Technologies Used
 * React
 * Formik
 * Yup (for schema validation)
 
-## Installation 
+## Installation
 
 You will need to install the following dependencies to use this components
 * React (`npm install react`)
@@ -57,7 +55,9 @@ The form includes the following inputs:
 
 ## Form validation
 Form validation is done with Formik and Yup. Required fields are name, email and channel. If the user tries to submit
-the form without filling these in, a relevant error message will be displayed in the user's current language.
+the form without filling these in, submit button will be disabled.
+
+If user just visits the required field, a relevant error message will be displayed in the user's current language.
 
 ## Language Switching
 This form supports language switching between English and Romanian. To change the form's language, click the button at 
